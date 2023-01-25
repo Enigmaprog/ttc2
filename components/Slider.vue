@@ -188,5 +188,153 @@ export default Vue.extend({
         }
         }
     }
+
+
+    @media (max-width: 1919px) {
+      .info-swiper {
+        width: 916px;
+        &-wrap {
+          &-bg {
+            height: 515px;
+            width: 730px;
+          }
+          &-shadow {
+            height: 700px;
+          }
+        }
+      }
+      .swiper-button-nav { 
+        &-prev {
+          left: 40px;
+        }
+        &-next {
+          right: 40px;
+        }
+      }
+    }
+    @media (max-width: 1199px) {
+      .info-swiper {
+        width: 800px;
+        &-wrap {
+          &-bg {
+            height: 480px;
+            width: 630px;
+          }
+          &-shadow {
+            height: 630px;
+          }
+        }
+      }
+      .swiper-button-nav { 
+        width: 300px;
+        height: 300px;
+        &-prev {
+          left: 0px;
+          padding-left: 15px;
+        }
+        &-next {
+          right: 0px;
+          padding-right: 15px;
+        }
+      }
+    }
+
+    @media (max-width: 991px) {
+      .info-swiper {
+        width: 650px;
+        &-wrap {
+          margin-top: 60px;
+          &-bg {
+            height: 360px;
+            width: 530px;
+          }
+          &-shadow {
+            height: 530px;
+          }
+        }
+      }
+      .swiper-pagination {
+        bottom: -66px;
+      }
+      .swiper-button-nav { 
+        width: 60px;
+        height: 60px;
+        left: auto;
+        right: auto;
+        bottom: -86px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #EBF1EF;
+        border: 1px solid #DFE2E5;
+        svg {
+          height: 32px;
+          width: 32px;
+        }
+        &::after {
+          content: none;
+        }
+        &-prev {
+          padding: 0;
+          left: 100px;
+        }
+        &-next {
+          padding: 0;
+          right: 100px;
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      margin-top: 80px;
+      h2 {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+      }
+      h4 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+      }
+      .info-swiper {
+        width: 332px;
+        .swiper-slide {
+          border-radius: 10px;
+        }
+        &-wrap {
+          margin-top: 60px;
+          &-bg {
+            height: 190px;
+            width: 270px;
+            top: -15px;
+            border-radius: 10px;
+          }
+          &-shadow {
+            height: 230px;
+          }
+        }
+      }
+      .swiper-button-nav { 
+        &-prev {
+          padding: 0;
+          left: 18px;
+        }
+        &-next {
+          padding: 0;
+          right: 18px;
+        }
+      }
+      .swiper-pagination-infoSlider {
+        .swiper-pagination {
+          &-bullet {
+            width: 20px;
+            &-active {
+              width: 40px;
+            }
+          }
+        }
+      }
+    }
 }
 </style>

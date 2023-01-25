@@ -1,7 +1,7 @@
 <template>
   <header class="header" :class="{'sticky': sticky}">
     <div class="header-content">
-      <img class="header-logo" src="/logo.svg" alt="TTC-Transtelecom">
+      <a href="/"><img class="header-logo" src="/logo.svg" alt="TTC-Transtelecom"></a>
       <div class="header-separate"></div>
       <div>
         <a class="a-btn header-phone" href="tel:191">
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="header-content">
-      <button class="btn btn-secondary"> <img src="/icons/user-fill.svg" alt=""><span>Личный кабинет</span></button>
+      <a href="https://cloud.ttc.kz/auth/signin" class="btn btn-secondary"> <img src="/icons/user-fill.svg" alt=""><span>Личный кабинет</span></a>
     </div>
   </header>
 </template>
@@ -69,12 +69,12 @@ export default {
       padding: 16px 14px;
       height: 100%;
       &-logo {
-        height: 40px;
+        height: 60px;
       }
       &-separate {
-        height: 24px;
-        margin-left: 12px;
-        margin-right: 12px;
+        height: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
       }
       &-phone {
         span {
@@ -91,6 +91,16 @@ export default {
             margin: 0;
           }
         }
+      }
+    }
+    @media (max-width: 767px) {
+      &-logo {
+        height: 40px;
+      }
+      &-separate {
+        height: 24px;
+        margin-left: 12px;
+        margin-right: 12px;
       }
     }
     @media (min-width: 768px) {

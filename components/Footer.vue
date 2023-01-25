@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <div class="d-flex w-100 justify-content-between align-items-center">
+      <div class="d-flex w-100 justify-content-between align-items-center footer-body">
         <div class="footer-content">
           <img class="footer-logo" src="/logo.svg" alt="TTC-Transtelecom">
           <div class="footer-separate"></div>
@@ -77,6 +77,31 @@ export default {
             fill: #273F4F;
           }
         }
+      }
+    }
+    @media (max-width: 991px) {
+      &-separate {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+    @media (max-width: 767px) {
+      padding: 40px 0;
+      .footer-body {
+        flex-direction: column;
+      }
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      &-separate {
+        display: none;
+      }
+      &-logo {
+        margin-bottom: 20px;
+      }
+      &-links {
+        margin-top: 40px;
       }
     }
   }

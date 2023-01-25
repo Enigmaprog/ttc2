@@ -9,7 +9,7 @@
       <div class="banner">
         <div class="row">
           <div class="col-lg-5">
-            <div class="d-flex h-100 flex-column justify-content-center">
+            <div class="banner-body">
               <h1 class="mb-2 pb-1">Public Cloud</h1>
               <span class="d-flex sub mb-4 pb-3">Переноси свою работу в облако вместе с нами</span>
               <a href="#" class="btn btn-primary">Подключить услугу</a>
@@ -17,7 +17,10 @@
           </div>
           <div class="col-lg-7">
             <div class="banner-img">
-              <img src="/banner-1.png" alt="">
+              <!-- <img src="/banner-1.png" alt=""> -->
+              <video autoplay loop muted class="bgvideo" id="bgvideo">
+                <source src="/intro.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
@@ -31,7 +34,7 @@
       <div class="container">
         <h2 class="text-center">Основные услуги</h2>
         <div class="row">
-          <div v-for="service in services" :key="`service-${service.id}`" class="col-lg-4 col-md-6">
+          <div v-for="service in services" :key="`service-${service.id}`" class="col-xl-4 col-lg-6 col-md-6">
             <div class="service-card">
               <div class="service-card-body">
                 <div>
@@ -91,63 +94,63 @@ export default Vue.extend({
                     <li>Единый центр мониторинга</li>
                     <li>Оплата Pay as you GO</li>
                   </ul>`,
-          link: '#'
+          link: 'https://cloud.ttc.kz/auth/signup'
         },
         {
           id: 2,
           img: '/service-2.png',
-          title: 'Облачная платформа',
+          title: 'Виртуальный сервер',
           html: `<ul>
-                    <li>Интуитивно понятный интерфейс</li>
-                    <li>Единый центр мониторинга</li>
-                    <li>Оплата Pay as you GO</li>
+                    <li>Гибкая настройка виртуальной машины</li>
+                    <li>Широкий выбор операционных систем</li>
+                    <li>Высокая отказоустойчивость</li>
                   </ul>`,
-          link: '#'
+          link: 'https://docs-cloud.ttc.kz/userguide/console/instance'
         },
         {
           id: 3,
           img: '/service-3.png',
-          title: 'Облачная платформа',
+          title: 'Объектное хранилище S3',
           html: `<ul>
-                    <li>Интуитивно понятный интерфейс</li>
-                    <li>Единый центр мониторинга</li>
-                    <li>Оплата Pay as you GO</li>
+                    <li>Надежно и безопасно</li>
+                    <li>Простой обмен документами</li>
+                    <li>Без дополнительных платежей</li>
                   </ul>`,
-          link: '#'
+          link: 'https://docs-cloud.ttc.kz/userguide/console/object-storage'
         },
         {
           id: 4,
           img: '/service-4.png',
-          title: 'Облачная платформа',
+          title: 'Kubernetes',
           html: `<ul>
-                    <li>Интуитивно понятный интерфейс</li>
-                    <li>Единый центр мониторинга</li>
-                    <li>Оплата Pay as you GO</li>
+                    <li>Инструменты для контейнерных приложений</li>
+                    <li>Выстраивание CI/CD </li>
+                    <li>Высоконагруженные приложения</li>
                   </ul>`,
-          link: '#'
+          link: 'https://docs-cloud.ttc.kz/userguide/console/managed-kubernetes'
         },
         {
           id: 5,
           img: '/service-5.png',
-          title: 'Облачная платформа',
+          title: 'Платформа приложений',
           html: `<ul>
-                    <li>Интуитивно понятный интерфейс</li>
-                    <li>Единый центр мониторинга</li>
-                    <li>Оплата Pay as you GO</li>
+                    <li>Доступ к Github, Gitlab, Docker</li>
+                    <li>Масштабируемость решения</li>
+                    <li>Удобное управление и мониторинг</li>
                   </ul>`,
-          link: '#'
+          link: 'https://docs-cloud.ttc.kz/userguide/console/app-platform'
         },
         {
           id: 6,
           img: '/service-6.png',
-          title: 'Облачная платформа',
+          title: 'Маркетплейс',
           html: `<ul>
-                    <li>Интуитивно понятный интерфейс</li>
-                    <li>Единый центр мониторинга</li>
-                    <li>Оплата Pay as you GO</li>
+                    <li>Большой выбор сервисов</li>
+                    <li>Быстрая развертка</li>
+                    <li>Непрерывное обновление</li>
                   </ul>`,
-          link: '#'
-        }
+          link: 'https://docs-cloud.ttc.kz/userguide/console/simplehost'
+        },
       ],
     };
   },
@@ -188,23 +191,126 @@ export default Vue.extend({
         bottom: 0px;
         width: 95%;
         right: 0;
+        z-index: -2;
         // height: 704px;
       }
       &-5 {
         bottom: 0px;
       }
+      @media (max-width: 1919px) {
+        &-1 {
+          height: 894px;
+        }
+        &-2 {
+          height: 1050px;
+        }
+        &-3 {
+          bottom: -280px;
+        }
+        &-4 {
+          bottom: 150px;
+        }
+        &-5 {
+          height: 400px;
+        }
+      }
+      @media (max-width: 1199px) {
+        &-2 {
+          height: 1740px;
+        }
+        &-4 {
+          bottom: 360px;
+        }
+      }
+      @media (max-width: 991px) {
+        &-1 {
+          height: 600px;
+          object-position: -120px;
+        }
+        &-2 {
+          top: -400px;
+          height: 2200px;
+        }
+        &-3 {
+          width: 200%;
+          bottom: -500px;
+          object-position: -500px;
+          z-index: -2;
+        }
+      }
+      @media (max-width: 767px) {
+        &-1 {
+          object-position: 0 -40px;
+          height: 300px;
+        }
+        &-2 {
+          top: -550px;
+          height: 3520px;
+        }
+        &-3 {
+          bottom: -540px;
+        }
+        &-4 {
+          display: none;
+        }
+        &-5 {
+          height: 500px;
+        }
+      }
     }
 
     .banner {
-      height: 600px;
-      &-img {
-        width: 100%;
+      padding: 80px 0;
+      padding-bottom: 160px;
+      &-body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         height: 500px;
+      }
+      &-img {
+        width: 1080px;
+        height: 800px;
+        position: absolute;
         overflow: hidden;
         display: flex;
         align-items: center;
-        img {
+        top: 135px;
+        img, video {
           width: 100%;
+          position: absolute;
+          top: -300px;
+          // height: 1000px;
+        }
+      }
+      @media (max-width: 991px) {
+        padding: 40px 0;
+        &-body {
+          height: 260px;
+        }
+        &-img {
+          width: 110%;
+          height: 500px;
+          position: relative;
+          top: 30px;
+          img, video {
+            top: -85px;
+            position: relative;
+          }
+        }
+      }
+      @media (max-width: 767px) {
+        padding-bottom: 100px;
+        &-img {
+          height: 300px;
+          width: 140%;
+          left: -16px;
+          top: 40px;
+          img, video {
+            top: -50px;
+            left: -20px;
+          }
         }
       }
     }
@@ -216,6 +322,7 @@ export default Vue.extend({
         margin-top: 0px;
       }
       &-card {
+        height: 100%;
         background: #FFFFFF;
         border: 1px solid rgba(39, 63, 79, 0.15);
         border-radius: 16px;
@@ -260,6 +367,47 @@ export default Vue.extend({
           transition: .2s;
         }
       }
+      @media (max-width: 1440px) {
+        .row {
+          --bs-gutter-x: 20px;
+        }
+         &-card {
+          padding: 14px;
+          &-body {
+            padding: 32px 18px;
+          }
+         }
+      }
+      @media (max-width: 991px) {
+        &-card {
+          &-body {
+            padding: 30px 16px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            min-height: 394px;
+            h4 {
+              font-weight: 700;
+              font-size: 22px;
+              line-height: 22px;
+            }
+          }
+        }
+        .row {
+          --bs-gutter-y: 80px;
+        }
+      }
+      @media (max-width: 767px) {
+        &-card {
+          &-body {
+            min-height: 326px;
+            img {
+              height: 140px;
+              margin-bottom: 4px;
+            }
+          }
+        }
+      }
     }
 
     .call-block-body {
@@ -276,6 +424,27 @@ export default Vue.extend({
       padding: 80px 155px;
       span {
         color: rgba(255, 255, 255, 0.8);
+      }
+      @media (max-width: 1919px) {
+        padding: 80px 110px;
+      }
+      @media (max-width: 991px) {
+        margin-top: 40px;
+        padding: 60px 20px;
+      }
+      @media (max-width: 767px) {
+        padding: 40px 12px;
+        border-radius: 20px;
+        h2 {
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 36px;
+        }
+        .sub {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 28px;
+        }
       }
     }
 
