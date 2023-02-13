@@ -1,8 +1,8 @@
 <template>
     <div class="info-slider">
       <div class="container">
-        <h2 class="mb-3 pb-1 text-center">Информативные дашборды и понятный интерфейс</h2>
-        <h4 class="sub text-center">Информация об используемых и доступных виртуальных ресурсах всегда под рукой. </h4>
+        <h2 class="mb-3 pb-1 text-center">{{$t('Информативные дашборды и понятный интерфейс')}}</h2>
+        <h4 class="sub text-center">{{$t('Информация об используемых и доступных виртуальных ресурсах всегда под рукой.')}} </h4>
 
         <div class="info-swiper-wrap">
           <div class="info-swiper-wrap-bg"></div>

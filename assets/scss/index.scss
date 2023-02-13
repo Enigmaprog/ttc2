@@ -219,4 +219,32 @@ body {
         --bs-btn-hover-bg: #FFF;
         --bs-btn-active-bg: #FFF;
     }
+    &-link {
+        --bs-btn-color: #0F0F0F;
+        --bs-btn-hover-color: #0F0F0F;
+        --bs-btn-active-color: #0F0F0F;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        svg, img {
+            margin-right: 4px;
+        }
+    }
+}
+
+.dropdown-toggle::after {
+    border: none;
+    background: url(/icons/chevron-down.svg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-left: 2px;
+    height: 12px;
+    width: 12px;
+}
+
+.dropdown-menu {
+    --bs-dropdown-bg: #FFF;
 }

@@ -1,5 +1,8 @@
 # ttc
 
+node -v = v16.15.1
+npm -v = v8.11.0
+
 ## Build Setup
 
 ```bash

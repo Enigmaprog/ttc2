@@ -7,14 +7,14 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'ttc',
+    title: 'TTC',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ru'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Транстелеком, ттс, transtelecom, ttc' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -51,7 +51,31 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/i18n'
   ],
+  i18n: {
+    /* module options */
+    locales: [
+      {
+        name: 'Русский',
+        code: 'ru',
+        file: 'ru-RU.js'
+      },
+      {
+        name: 'English',
+        code: 'en',
+        file: 'en-US.js'
+      },
+      {
+        name: 'Казак',
+        code: 'kk',
+        file: 'kk-KZ.js'
+      }
+    ],
+    lazy: true,
+    langDir: 'lang/',
+    defaultLocale: 'ru'
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

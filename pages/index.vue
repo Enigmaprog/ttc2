@@ -10,9 +10,9 @@
         <div class="row">
           <div class="col-lg-5">
             <div class="banner-body">
-              <h1 class="mb-2 pb-1">Public Cloud</h1>
-              <span class="d-flex sub mb-4 pb-3">Переноси свою работу в облако вместе с нами</span>
-              <a href="#" class="btn btn-primary">Подключить услугу</a>
+              <h1 class="mb-2 pb-1">{{$t('Public Cloud')}}</h1>
+              <span class="d-flex sub mb-4 pb-3">{{$t('Переноси свою работу в облако вместе с нами')}}</span>
+              <a href="#" class="btn btn-primary">{{$t('Подключить услугу')}}</a>
             </div>
           </div>
           <div class="col-lg-7">
@@ -32,23 +32,23 @@
       <img class="ttc-app-bg ttc-app-bg-2" src="/bg-2.svg" alt="">
       <img class="ttc-app-bg ttc-app-bg-3" src="/bg-3.svg" alt="">
       <div class="container">
-        <h2 class="text-center">Основные услуги</h2>
+        <h2 class="text-center">{{$t('Основные услуги')}}</h2>
         <div class="row">
           <div v-for="service in services" :key="`service-${service.id}`" class="col-xl-4 col-lg-6 col-md-6">
             <div class="service-card">
               <div class="service-card-body">
                 <div>
                   <img :src="service.img" alt="">
-                  <h4>{{ service.title }}</h4>
-                  <div v-html="service.html">
+                  <h4>{{ $t(service.title) }}</h4>
+                  <div>
                     <ul>
-                      <li>Интуитивно понятный интерфейс</li>
-                      <li>Единый центр мониторинга</li>
-                      <li>Оплата Pay as you GO</li>
+                      <li v-for="(l, i) in service.list" :key="`listitem-${service.id}-${i}`">{{$t(l)}}</li>
+                      <!-- <li>Единый центр мониторинга</li>
+                      <li>Оплата Pay as you GO</li> -->
                     </ul>
                   </div>
                 </div>
-                <a :href="service.link" class="btn btn-primary">Подробнее</a>
+                <a :href="service.link" class="btn btn-primary">{{$t('Подробнее')}}</a>
               </div>
             </div>
           </div>
@@ -61,9 +61,9 @@
     <div class="call-block">
       <div class="container">
         <div class="call-block-body">
-          <h2 class="mb-3 pb-1">Подключите наши услуги прямо сейчас и заберите свой подарок в личном кабинете </h2>
-          <span class="sub mb-4 pb-3">Зарегистрируйтесь на платформе и получите ваучер на бесплатное пользование</span>
-          <button class="btn btn-light">Перейти в Личный кабинет</button>
+          <h2 class="mb-3 pb-1">{{$t('Подключите наши услуги прямо сейчас и заберите свой подарок в личном кабинете')}} </h2>
+          <span class="sub mb-4 pb-3">{{$t('Зарегистрируйтесь на платформе и получите ваучер на бесплатное пользование')}}</span>
+          <button class="btn btn-light">{{$t('Перейти в Личный кабинет')}}</button>
         </div>
       </div>
     </div>
@@ -94,6 +94,7 @@ export default Vue.extend({
                     <li>Единый центр мониторинга</li>
                     <li>Оплата Pay as you GO</li>
                   </ul>`,
+          list: ['Интуитивно понятный интерфейс', 'Единый центр мониторинга', 'Оплата Pay as you GO'],
           link: 'https://cloud.ttc.kz/auth/signup'
         },
         {
@@ -105,6 +106,7 @@ export default Vue.extend({
                     <li>Широкий выбор операционных систем</li>
                     <li>Высокая отказоустойчивость</li>
                   </ul>`,
+          list: ['Гибкая настройка виртуальной машины', 'Широкий выбор операционных систем', 'Высокая отказоустойчивость'],
           link: 'https://docs-cloud.ttc.kz/userguide/console/instance'
         },
         {
@@ -116,6 +118,7 @@ export default Vue.extend({
                     <li>Простой обмен документами</li>
                     <li>Без дополнительных платежей</li>
                   </ul>`,
+          list: ['Надежно и безопасно', 'Простой обмен документами', 'Без дополнительных платежей'],
           link: 'https://docs-cloud.ttc.kz/userguide/console/object-storage'
         },
         {
@@ -127,6 +130,7 @@ export default Vue.extend({
                     <li>Выстраивание CI/CD </li>
                     <li>Высоконагруженные приложения</li>
                   </ul>`,
+          list: ['Инструменты для контейнерных приложений', 'Выстраивание CI/CD', 'Высоконагруженные приложения'],
           link: 'https://docs-cloud.ttc.kz/userguide/console/managed-kubernetes'
         },
         {
@@ -138,6 +142,7 @@ export default Vue.extend({
                     <li>Масштабируемость решения</li>
                     <li>Удобное управление и мониторинг</li>
                   </ul>`,
+          list: ['Доступ к Github, Gitlab, Docker', 'Масштабируемость решения', 'Удобное управление и мониторинг'],
           link: 'https://docs-cloud.ttc.kz/userguide/console/app-platform'
         },
         {
@@ -149,6 +154,7 @@ export default Vue.extend({
                     <li>Быстрая развертка</li>
                     <li>Непрерывное обновление</li>
                   </ul>`,
+          list: ['Большой выбор сервисов', 'Быстрая развертка', 'Непрерывное обновление'],
           link: 'https://docs-cloud.ttc.kz/userguide/console/simplehost'
         },
       ],
