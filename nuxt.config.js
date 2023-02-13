@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'TTC',
+    title: 'Public Cloud TTC',
     htmlAttrs: {
       lang: 'ru'
     },
