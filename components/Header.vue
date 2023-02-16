@@ -37,7 +37,7 @@
           <li><a class="dropdown-item" href="#">English</a></li> -->
         </ul>
       </div>
-      <a href="https://cloud.ttc.kz/auth/signin" class="btn btn-secondary"> <img src="/icons/user-fill.svg" alt=""><span>{{$t('Личный кабинет')}}</span></a>
+      <a href="https://console.ttc.kz/auth/signin" class="btn btn-secondary"> <img src="/icons/user-fill.svg" alt=""><span>{{$t('Личный кабинет')}}</span></a>
     </div>
   </header>
 </template>

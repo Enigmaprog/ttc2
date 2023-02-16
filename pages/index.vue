@@ -95,7 +95,7 @@ export default Vue.extend({
                     <li>Оплата Pay as you GO</li>
                   </ul>`,
           list: ['Интуитивно понятный интерфейс', 'Единый центр мониторинга', 'Оплата Pay as you GO'],
-          link: 'https://cloud.ttc.kz/auth/signup'
+          link: 'https://console.ttc.kz/auth/signup'
         },
         {
           id: 2,
