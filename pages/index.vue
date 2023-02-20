@@ -12,7 +12,7 @@
             <div class="banner-body">
               <h1 class="mb-2 pb-1">{{$t('Public Cloud')}}</h1>
               <span class="d-flex sub mb-4 pb-3">{{$t('Переноси свою работу в облако вместе с нами')}}</span>
-              <a href="#" class="btn btn-primary">{{$t('Подключить услугу')}}</a>
+              <a href="https://console.ttc.kz" class="btn btn-primary">{{$t('Подключить услугу')}}</a>
             </div>
           </div>
           <div class="col-lg-7">
@@ -63,7 +63,7 @@
         <div class="call-block-body">
           <h2 class="mb-3 pb-1">{{$t('Подключите наши услуги прямо сейчас и заберите свой подарок в личном кабинете')}} </h2>
           <span class="sub mb-4 pb-3">{{$t('Зарегистрируйтесь на платформе и получите ваучер на бесплатное пользование')}}</span>
-          <button class="btn btn-light">{{$t('Перейти в Личный кабинет')}}</button>
+          <a href="https://console.ttc.kz" class="btn btn-light">{{$t('Перейти в Личный кабинет')}}</a>
         </div>
       </div>
     </div>

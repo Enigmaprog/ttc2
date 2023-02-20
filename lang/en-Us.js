@@ -1,5 +1,5 @@
 export default {
-    '- круглосуточный контакт центр': '- round-the-clock contact center',
+    '- круглосуточный контакт центр': '- round-the-clock user support',
     'Личный кабинет': 'Personal account',
     'Public Cloud': 'Public Cloud',
     'Переноси свою работу в облако вместе с нами': 'Transfer your work to the cloud with us',

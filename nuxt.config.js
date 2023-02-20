@@ -85,17 +85,17 @@ export default {
     /* module options */
     locales: [
       {
-        name: "Русский",
+        name: "RU",
         code: "ru",
         file: "ru-RU.js",
       },
       {
-        name: "English",
+        name: "EN",
         code: "en",
         file: "en-US.js",
       },
       {
-        name: "Казак",
+        name: "KZ",
         code: "kk",
         file: "kk-KZ.js",
       },

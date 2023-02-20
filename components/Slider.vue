@@ -44,6 +44,7 @@ export default Vue.extend({
       autoplay: {
           delay: 10000
       },
+      loop: true,
       slidesPerView: 1,
       spaceBetween: 0,
       // centeredSlides: true,

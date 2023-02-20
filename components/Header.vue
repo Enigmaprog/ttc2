@@ -4,9 +4,9 @@
       <a href="/"><img class="header-logo" src="/logo.svg" alt="TTC-Transtelecom"></a>
       <div class="header-separate"></div>
       <div>
-        <a class="a-btn header-phone" href="tel:191">
+        <a class="a-btn header-phone" href="mailto:cloud@ttc.kz">
           <img class="me-2 icon" src="/icons/phone-fill.svg" alt="phone">
-          <span class="header-phone-number">191</span>
+          <span class="header-phone-number">cloud@ttc.kz</span>
           <span class="t2 ms-1">{{$t('- круглосуточный контакт центр')}}</span>
         </a>
       </div>
@@ -28,7 +28,7 @@
             </clipPath>
             </defs>
           </svg>
-          <span>{{ $i18n.locale == 'ru' ? 'Ru' : $i18n.locale == 'en' ? 'En' : 'Kz' }}</span>
+          <span>{{ $i18n.locale == 'ru' ? 'RU' : $i18n.locale == 'en' ? 'EN' : 'KZ' }}</span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <nuxt-link class="dropdown-item" v-for="locale in availableLocales" :key="locale.code" :to="switchLocalePath(locale.code)">{{ locale.name }}</nuxt-link>
