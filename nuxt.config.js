@@ -79,8 +79,13 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    "@nuxtjs/google-gtag",
     "@nuxtjs/i18n",
   ],
+  'google-gtag':{
+    id: 'G-0ZL7YT6ZVQ',
+    // debug: true
+  },
   i18n: {
     /* module options */
     locales: [
