@@ -284,10 +284,11 @@ export default Vue.extend({
         align-items: center;
         top: 135px;
         img, video {
+          z-index: 0;
           width: 100%;
           position: absolute;
           top: -300px;
-          // height: 1000px;
+          height: 1080px;
         }
       }
       @media (max-width: 991px) {
