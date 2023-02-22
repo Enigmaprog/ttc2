@@ -8,7 +8,7 @@ export default {
     },
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
@@ -17,7 +17,8 @@ export default {
   head: {
     title: "Public Cloud TTC",
     htmlAttrs: {
-      lang: "ru",
+      lang: 'ru',
+      prefix: 'og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#'
     },
     meta: [
       { charset: "utf-8" },
@@ -28,8 +29,17 @@ export default {
         content: "Транстелеком, ттс, transtelecom, ttc",
       },
       { name: "format-detection", content: "telephone=no" },
+      { content: 'true', name: 'HandheldFriendly' },
+      { content: 'width', name: 'MobileOptimized' },
+      { content: 'yes', name: 'apple-mobile-web-app-capable' },
+      { property: "og:image", content: 'https://cloud.ttc.kz/logo.svg'},
+      { property: "og:site_name", content: "Public Cloud TTC" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://cloud.ttc.kz/" },
+      { property: "og:title", content: "Public Cloud TTC" }
     ],
     link: [
+      { href: "https://cloud.ttc.kz/", rel: "canonical" },
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css",
@@ -81,6 +91,7 @@ export default {
     "@nuxtjs/axios",
     "@nuxtjs/google-gtag",
     "@nuxtjs/i18n",
+    "@nuxtjs/sitemap",
   ],
   'google-gtag':{
     id: 'G-0ZL7YT6ZVQ',
@@ -108,6 +119,21 @@ export default {
     lazy: true,
     langDir: "lang/",
     defaultLocale: "ru",
+  },
+  sitemap: {
+    hostname: 'https://cloud.ttc.kz/',
+    gzip: true,
+    i18n: true,
+    exclude: [
+      '/secret',
+      '/admin/**'
+    ],
+    defaults: {
+      changefreq: 'daily',
+      priority: 1,
+      lastmod: new Date(),
+      lastmodrealtime: true
+    },
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

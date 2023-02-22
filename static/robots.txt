@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Host: cloud.ttc.kz
+Sitemap: https://cloud.ttc.kz/sitemap.xml
