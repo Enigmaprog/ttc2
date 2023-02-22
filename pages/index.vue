@@ -1,5 +1,5 @@
 <template>
-  <div class="ttc-app">
+  <main class="ttc-app">
     <img class="ttc-app-bg ttc-app-bg-1" src="/bg-1.svg" alt="">
     <div class="container container-header">
       <Header />
@@ -11,16 +11,20 @@
           <div class="col-lg-5">
             <div class="banner-body">
               <h1 class="mb-2 pb-1">{{$t('Public Cloud')}}</h1>
-              <span class="d-flex sub mb-4 pb-3">{{$t('Переноси свою работу в облако вместе с нами')}}</span>
+              <h3 class="d-flex sub mb-4 pb-3">{{$t('Переноси свою работу в облако вместе с нами')}}</h3>
               <a href="https://console.ttc.kz" class="btn btn-primary">{{$t('Подключить услугу')}}</a>
             </div>
           </div>
           <div class="col-lg-7">
             <div class="banner-img">
-              <!-- <img src="/banner-1.png" alt=""> -->
-              <video autoplay loop muted class="bgvideo" id="bgvideo">
-                <source src="/intro.mp4" type="video/mp4" />
-              </video>
+              <div class="video-intro">
+                <!-- <img src="/banner-1.png" alt=""> -->
+                <video autoplay loop muted class="bgvideo" id="bgvideo" poster="/banner-1.png">
+                  <source src="/intro.mp4" type="video/mp4" />
+                  <source src="/intro.webm" type="video/webm">
+                  Your browser doesn't support HTML5 video tag.
+                </video>
+              </div>
             </div>
           </div>
         </div>
@@ -73,7 +77,7 @@
     <img class="ttc-app-bg ttc-app-bg-4" src="/bg-4.svg" alt="">
     <img class="ttc-app-bg ttc-app-bg-5" src="/bg-5.svg" alt="">
 
-  </div>
+  </main>
 </template>
 
 <script lang="js">
@@ -283,12 +287,23 @@ export default Vue.extend({
         display: flex;
         align-items: center;
         top: 135px;
-        img, video {
+        outline: none;
+        border: none;
+        .video-intro {
           z-index: 0;
           width: 100%;
           position: absolute;
           top: -300px;
           height: 1080px;
+          overflow: hidden;
+          outline: none;
+          border: none;
+        }
+        img, video {
+          height: 100%;
+          width: 100%;
+          outline: none;
+          border: none;
         }
       }
       @media (max-width: 991px) {
@@ -301,7 +316,7 @@ export default Vue.extend({
           height: 500px;
           position: relative;
           top: 30px;
-          img, video {
+          .video-intro {
             top: -85px;
             position: relative;
           }
@@ -314,7 +329,7 @@ export default Vue.extend({
           width: 140%;
           left: -16px;
           top: 40px;
-          img, video {
+          .video-intro {
             top: -50px;
             left: -20px;
           }
