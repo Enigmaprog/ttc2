@@ -17,8 +17,9 @@ export default {
   head: {
     title: "Public Cloud TTC",
     htmlAttrs: {
-      lang: 'ru',
-      prefix: 'og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#'
+      lang: "ru",
+      prefix:
+        "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#",
     },
     meta: [
       { charset: "utf-8" },
@@ -29,14 +30,14 @@ export default {
         content: "Транстелеком, ттс, transtelecom, ttc",
       },
       { name: "format-detection", content: "telephone=no" },
-      { content: 'true', name: 'HandheldFriendly' },
-      { content: 'width', name: 'MobileOptimized' },
-      { content: 'yes', name: 'apple-mobile-web-app-capable' },
-      { property: "og:image", content: 'https://cloud.ttc.kz/logo.svg'},
+      { content: "true", name: "HandheldFriendly" },
+      { content: "width", name: "MobileOptimized" },
+      { content: "yes", name: "apple-mobile-web-app-capable" },
+      { property: "og:image", content: "https://cloud.ttc.kz/logo.svg" },
       { property: "og:site_name", content: "Public Cloud TTC" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cloud.ttc.kz/" },
-      { property: "og:title", content: "Public Cloud TTC" }
+      { property: "og:title", content: "Public Cloud TTC" },
     ],
     link: [
       { href: "https://cloud.ttc.kz/", rel: "canonical" },
@@ -92,9 +93,17 @@ export default {
     "@nuxtjs/google-gtag",
     "@nuxtjs/i18n",
     "@nuxtjs/sitemap",
+    "@nuxtjs/yandex-metrika",
   ],
-  'google-gtag':{
-    id: 'G-0ZL7YT6ZVQ',
+  yandexMetrika: {
+    id: "92546164",
+    clickmap: true,
+    webvisor: true,
+    trackLinks: true,
+    accurateTrackBounce: true,
+  },
+  "google-gtag": {
+    id: "G-0ZL7YT6ZVQ",
     // debug: true
   },
   i18n: {
@@ -121,18 +130,15 @@ export default {
     defaultLocale: "ru",
   },
   sitemap: {
-    hostname: 'https://cloud.ttc.kz/',
+    hostname: "https://cloud.ttc.kz/",
     gzip: true,
     i18n: true,
-    exclude: [
-      '/secret',
-      '/admin/**'
-    ],
+    exclude: ["/secret", "/admin/**"],
     defaults: {
-      changefreq: 'daily',
+      changefreq: "daily",
       priority: 1,
       lastmod: new Date(),
-      lastmodrealtime: true
+      lastmodrealtime: true,
     },
   },
 

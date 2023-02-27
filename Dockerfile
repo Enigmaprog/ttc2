@@ -13,6 +13,7 @@ COPY package*.json ./
 
 # copy the app, note .dockerignore
 RUN yarn
+RUN yarn build
 RUN yarn generate
 
 COPY . .
