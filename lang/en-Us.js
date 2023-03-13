@@ -35,7 +35,7 @@ export default {
     'Подключите наши услуги прямо сейчас и заберите свой подарок в личном кабинете': 'Connect our services right now and pick up your gift in your personal account',
     'Зарегистрируйтесь на платформе и получите ваучер на бесплатное пользование': 'Register on the platform and get a voucher for free use',
     'Перейти в Личный кабинет': 'Go to your Personal Account',
-    '© 2017, АО «ТРАНСТЕЛЕКОМ»': '© 2017, JSC «TRANSTELECOM»',
+    ', АО «ТРАНСТЕЛЕКОМ»': ', JSC «TRANSTELECOM»',
     'Все права защищены': 'All rights reserved'
 }
  

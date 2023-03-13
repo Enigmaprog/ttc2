@@ -6,7 +6,7 @@
           <img class="footer-logo" src="/logo.svg" alt="TTC-Transtelecom">
           <div class="footer-separate"></div>
           <div class="d-flex flex-column">
-            <b class="description-bold">{{$t('© 2017, АО «ТРАНСТЕЛЕКОМ»')}}</b>
+            <b class="description-bold">{{'©' + (new Date()).getFullYear()}}{{$t(', АО «ТРАНСТЕЛЕКОМ»')}}</b>
             <span class="description">{{$t('Все права защищены')}}</span>
           </div>
         </div>
