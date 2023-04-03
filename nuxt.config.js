@@ -36,10 +36,18 @@ export default {
       { content: "width", name: "MobileOptimized" },
       { content: "yes", name: "apple-mobile-web-app-capable" },
       { property: "og:image", content: "https://cloud.ttc.kz/logo.svg" },
-      { property: "og:site_name", content: "Public Cloud TTC" },
+      {
+        property: "og:site_name",
+        content:
+          "Public Cloud: flexible and scalable cloud services for your business from Transtelecom",
+      },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://cloud.ttc.kz/" },
-      { property: "og:title", content: "Public Cloud TTC" },
+      {
+        property: "og:title",
+        content:
+          "Public Cloud: flexible and scalable cloud services for your business from Transtelecom",
+      },
     ],
     link: [
       { href: "https://cloud.ttc.kz/", rel: "canonical" },
