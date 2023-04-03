@@ -15,7 +15,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Public Cloud TTC",
+    title:
+      "Public Cloud: flexible and scalable cloud services for your business from Transtelecom",
     htmlAttrs: {
       lang: "ru",
       prefix:
@@ -27,7 +28,8 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: "Транстелеком, ттс, transtelecom, ttc",
+        content:
+          "Transtelecom's public Cloud is reliable and secure cloud services (Kubernetes, Simplehost, S3 Cloud Storage, AppPlatform) for your business. Create your own virtual server (VM) with flexible settings and scalability. Store your data securely and accessible with the Public Cloud from Transtelecom",
       },
       { name: "format-detection", content: "telephone=no" },
       { content: "true", name: "HandheldFriendly" },
