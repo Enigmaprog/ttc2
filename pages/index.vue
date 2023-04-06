@@ -86,6 +86,19 @@ import Vue from 'vue'
 export default Vue.extend({
   
   name: 'IndexPage',
+  head(){
+
+    let title = this.$t('main.title')
+    let description = this.$t('main.description')
+    return {
+      title,
+      meta: [
+        { property: 'og:title', content: title },
+        { hid: 'description', name: 'description', description },
+        { property: 'og:description', content: description },
+      ],
+    }
+  },
   data() {
     return {
       services: [

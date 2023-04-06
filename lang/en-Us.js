@@ -36,7 +36,11 @@ export default {
     'Зарегистрируйтесь на платформе и получите ваучер на бесплатное пользование': 'Register on the platform and get a voucher for free use',
     'Перейти в Личный кабинет': 'Go to your Personal Account',
     ', АО «ТРАНСТЕЛЕКОМ»': ', JSC «TRANSTELECOM»',
-    'Все права защищены': 'All rights reserved'
+    'Все права защищены': 'All rights reserved',
+    main: {
+        title: 'Public Cloud: flexible and scalable cloud services for your business from Transtelecom',
+        description: "Transtelecom's public Cloud is reliable and secure cloud services (Kubernetes, Simplehost, S3 Cloud Storage, AppPlatform) for your business. Create your own virtual server (VM) with flexible settings and scalability. Store your data securely and accessible with the Public Cloud from Transtelecom."
+    }
 }
  
 
