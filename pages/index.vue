@@ -60,6 +60,10 @@
       </div>
     </div>
 
+    <no-ssr>
+      <Calculator />
+    </no-ssr>
+
     <Slider />
 
     <div class="call-block">
