@@ -25,6 +25,9 @@
     "vue-slider-component": "^3.2.24",
     "vue-template-compiler": "^2.7.10"
   },
+  "overrides": {
+    "vue-i18n": "^9.3.0-beta.14"
+  },
   "devDependencies": {
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",

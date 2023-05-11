@@ -599,7 +599,7 @@ export default {
                 </div>
 
                 <div class="container-column center" v-bind:style="{ color: '#4e4b4b', fontSize: '18px' }">
-                    <b-card-text>{{ $t("Total cost / monthly (Vat not included)") }} </b-card-text>
+                    <b-card-text>{{ $t("Total cost / monthly") }} </b-card-text>
                 </div>
 
                 <div class="container-column center" v-bind:style="{ color: 'green', fontSize: '33px', fontWeight: 'bold' }">
